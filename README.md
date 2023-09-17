@@ -1,5 +1,21 @@
 # Multi-Private-VPC
 
+## Execute Terraform
+
+```sh
+   cd /infra
+
+   ## 1. provider_profile 수정
+   ## 2. ec2_key_path 수정
+
+   terraform init
+   terraform plan
+   terraform apply
+
+   ## Cleanup
+   terraform destroy
+```
+
 ## Single VPC
 
 ![vpc](./public/single.png)
@@ -55,3 +71,9 @@
 
 - onPremise network에서도 연결하기 위해서 VPN을 사용할 수 있다.
 - Customer Gateway ID => onPremise Unique Id
+
+## ISP vs BGP (Border Gateway Protocol) ?
+
+## Reference
+
+- <a href="https://www.youtube.com/watch?v=vEFh0BQ3iOk&t=1744"> Transit Gateway </a>
