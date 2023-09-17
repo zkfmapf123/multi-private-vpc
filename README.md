@@ -3,7 +3,7 @@
 ## Execute Terraform
 
 ```sh
-   cd /infra
+   cd /infra/transit-gateway
 
    ## 1. provider_profile 수정
    ## 2. ec2_key_path 수정
