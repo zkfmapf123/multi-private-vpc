@@ -27,22 +27,4 @@ resource "aws_subnet" "public-subnet" {
   }
 }
 
-## route_table 
-resource "aws_route_table" "route-table" {
-  vpc_id = aws_vpc.vpc.id
-
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.igw.id
-  }
-
-  tags = {
-    Name = "${var.common_app_name}-rt"
-  }
-}
-
-## route_table mapping
-resource "aws_route_table_association" "mapping" {
-  subnet_id      = aws_subnet.public-subnet.id
-  route_table_id = aws_route_table.route-table.id
-}
+## Routing Table은 만들어줘야 함

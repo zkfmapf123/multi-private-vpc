@@ -50,3 +50,8 @@
 
 - 수 많은 VPC + onPremise Network를 쉽고 자유롭고 연결할 수 있음
 - 자동적으로 Default TGW Routing Table에 Mapping이 됨
+
+![vpn](./public/vpn.png)
+
+- onPremise network에서도 연결하기 위해서 VPN을 사용할 수 있다.
+- Customer Gateway ID => onPremise Unique Id

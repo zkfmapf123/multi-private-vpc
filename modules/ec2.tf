@@ -40,7 +40,7 @@ module "linux" {
   subnet_id                   = aws_subnet.public-subnet.id
   vpc_security_group_ids      = [aws_security_group.linux-sg.id]
   monitoring                  = true
-  associate_public_ip_address = false
+  associate_public_ip_address = true
 
   ebs_block_device = [{
     device_name           = "/dev/sda1"
