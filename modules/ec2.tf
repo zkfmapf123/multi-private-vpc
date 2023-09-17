@@ -36,11 +36,11 @@ module "linux" {
   ami                         = var.ec2_ami
   instance_type               = var.ec2_type
   key_name                    = aws_key_pair.key_pair.key_name
-  availability_zone           = var.region
+  availability_zone           = "${var.region}a"
   subnet_id                   = aws_subnet.public-subnet.id
   vpc_security_group_ids      = [aws_security_group.linux-sg.id]
   monitoring                  = true
-  associate_public_ip_address = true
+  associate_public_ip_address = false
 
   ebs_block_device = [{
     device_name           = "/dev/sda1"
