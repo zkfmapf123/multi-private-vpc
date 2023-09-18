@@ -16,6 +16,10 @@
    terraform destroy
 ```
 
+## SSH가 아닌 로그인방식으로 접속 하기 원할때
+
+![sshd](./SSHD.md)
+
 ## Single VPC
 
 ![vpc](./public/single.png)
