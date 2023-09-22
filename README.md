@@ -18,7 +18,8 @@
 
 ## SSH가 아닌 로그인방식으로 접속 하기 원할때
 
-[sshd](./SSHD.md)
+[리눅스 로그인](./linux_login.md)
+[윈도우 로그인](./window_login.md)
 
 ## Single VPC
 
