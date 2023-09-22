@@ -17,6 +17,11 @@ Changing password for user abcde
 New password:
 Retype new password:
 passwd: all authentication tokens updated successfully.
+
+su -
+su mooove
+
+두 유저 모두 root 인걸 확인해야 함..
 ```
 
 ## 3. user 추가
@@ -27,13 +32,21 @@ passwd: all authentication tokens updated successfully.
     sudo chmod u+w /etc/sudoers
 ```
 
-## 4. 유저에게 쓰기권한 추가
+## 4. 유저에게 관리자권한 주기
 
 ```sh
-    sudo vi /etc/sudoers
+    // whell 그룹 즉 관리자 권한을 대행하는 그룹을 부여함
 
-    // ...
-    mooove    ALL=(ALL)    ALL
+    // 관리자로 다시 접속
+    sudo -
+
+    // wheel 권한 주기
+    usermod -G wheel mooove
+
+    // wheel 권한 확인
+    cat /etc/group
+
+    // /etc/sudoers에 mooove ALL=(ALL) ALL 처리하는것은 좋지 않음 (보안상)
 ```
 
 ## 5. sshd_config 파일 설정
